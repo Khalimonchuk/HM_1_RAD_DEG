@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Lits Test NG first suite" verbose="1" parallel="false">
+<!--    <listeners>-->
+<!--        <listener class-name=""/>-->
+<!--    </listeners>-->
+<test name="App" parallel="instances" thread-count="1">
+
+
+            <packages>
+                <package name="com.mkyong.hashing"></package>
+            </packages>
+
+</test>
+
+
+    <test name="Smoke Calculator" parallel="instances" thread-count="1">
+
+        <groups>
+            <run>
+                <include name="smoke">
+                </include>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.mkyong.regression"></package>
+        </packages>
+
+    </test>
+</suite>
